@@ -1,0 +1,202 @@
+/* Shared Stylesheet - Aetheric Minimalist Design System */
+
+:root {
+  /* RGB Colors for Tailwind Opacity Support */
+  --color-background-rgb: 252, 248, 251; /* #fcf8fb */
+  --color-on-background-rgb: 27, 27, 29; /* #1b1b1d */
+  
+  --color-surface-rgb: 252, 248, 251; /* #fcf8fb */
+  --color-surface-dim-rgb: 220, 217, 220; /* #dcd9dc */
+  --color-surface-bright-rgb: 252, 248, 251; /* #fcf8fb */
+  
+  --color-surface-container-lowest-rgb: 255, 255, 255; /* #ffffff */
+  --color-surface-container-low-rgb: 246, 243, 245; /* #f6f3f5 */
+  --color-surface-container-rgb: 240, 237, 239; /* #f0edef */
+  --color-surface-container-high-rgb: 234, 231, 234; /* #eae7ea */
+  --color-surface-container-highest-rgb: 228, 226, 228; /* #e4e2e4 */
+  
+  --color-on-surface-rgb: 27, 27, 29; /* #1b1b1d */
+  --color-on-surface-variant-rgb: 65, 71, 85; /* #414755 */
+  
+  --color-primary-rgb: 0, 88, 188; /* #0058bc */
+  --color-on-primary-rgb: 255, 255, 255; /* #ffffff */
+  --color-primary-container-rgb: 0, 112, 235; /* #0070eb */
+  --color-on-primary-container-rgb: 254, 252, 255; /* #fefcff */
+  
+  --color-secondary-rgb: 144, 38, 195; /* #9026c3 */
+  --color-on-secondary-rgb: 255, 255, 255; /* #ffffff */
+  --color-secondary-container-rgb: 203, 102, 254; /* #cb66fe */
+  --color-on-secondary-container-rgb: 74, 0, 107; /* #4a006b */
+  
+  --color-tertiary-rgb: 158, 61, 0; /* #9e3d00 */
+  --color-on-tertiary-rgb: 255, 255, 255; /* #ffffff */
+  
+  --color-outline-rgb: 113, 119, 134; /* #717786 */
+  --color-outline-variant-rgb: 193, 198, 215; /* #c1c6d7 */
+
+  /* Fallback HEX mappings */
+  --color-background: rgb(var(--color-background-rgb));
+  --color-on-background: rgb(var(--color-on-background-rgb));
+  --color-surface: rgb(var(--color-surface-rgb));
+  --color-surface-dim: rgb(var(--color-surface-dim-rgb));
+  --color-surface-bright: rgb(var(--color-surface-bright-rgb));
+  --color-on-surface: rgb(var(--color-on-surface-rgb));
+  --color-on-surface-variant: rgb(var(--color-on-surface-variant-rgb));
+  --color-primary: rgb(var(--color-primary-rgb));
+  --color-secondary: rgb(var(--color-secondary-rgb));
+
+  /* Glassmorphism Specs */
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: rgba(0, 0, 0, 0.04);
+}
+
+.dark {
+  /* RGB Colors - Dark Theme Override */
+  --color-background-rgb: 18, 18, 20; /* #121214 */
+  --color-on-background-rgb: 243, 240, 242; /* #f3f0f2 */
+  
+  --color-surface-rgb: 18, 18, 20; /* #121214 */
+  --color-surface-dim-rgb: 10, 10, 11; /* #0a0a0b */
+  --color-surface-bright-rgb: 27, 27, 29; /* #1b1b1d */
+  
+  --color-surface-container-lowest-rgb: 7, 7, 8; /* #070708 */
+  --color-surface-container-low-rgb: 15, 15, 17; /* #0f0f11 */
+  --color-surface-container-rgb: 27, 27, 29; /* #1b1b1d */
+  --color-surface-container-high-rgb: 36, 36, 38; /* #242426 */
+  --color-surface-container-highest-rgb: 43, 43, 46; /* #2b2b2e */
+  
+  --color-on-surface-rgb: 243, 240, 242; /* #f3f0f2 */
+  --color-on-surface-variant-rgb: 161, 166, 181; /* #a1a6b5 */
+  
+  --color-primary-rgb: 173, 198, 255; /* #adc6ff */
+  --color-on-primary-rgb: 0, 45, 107; /* #002d6b */
+  --color-primary-container-rgb: 0, 68, 147; /* #004493 */
+  --color-on-primary-container-rgb: 216, 226, 255; /* #d8e2ff */
+  
+  --color-secondary-rgb: 233, 179, 255; /* #e9b3ff */
+  --color-on-secondary-rgb: 83, 0, 123; /* #53007b */
+  --color-secondary-container-rgb: 114, 0, 163; /* #7200a3 */
+  --color-on-secondary-container-rgb: 246, 217, 255; /* #f6d9ff */
+  
+  --color-tertiary-rgb: 255, 181, 149; /* #ffb595 */
+  --color-on-tertiary-rgb: 91, 32, 0; /* #5b2000 */
+  
+  --color-outline-rgb: 140, 146, 161; /* #8c92a1 */
+  --color-outline-variant-rgb: 73, 78, 93; /* #494e5d */
+
+  /* Glassmorphism Specs - Dark Mode */
+  --glass-bg: rgba(18, 18, 20, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+}
+
+/* Global Reset */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-container-highest);
+  border-radius: 9999px;
+  border: 2px solid var(--color-background);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-outline);
+}
+
+/* Glassmorphic Utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 40px var(--glass-shadow);
+  transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Clean bottom outline input styling */
+.glass-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-outline-variant);
+  color: var(--color-on-background);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.glass-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 1px 0 var(--color-primary);
+}
+
+/* Hover scales */
+.interactive-hover {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.interactive-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px var(--glass-shadow);
+}
+.interactive-hover:active {
+  transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scroll Animation Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Theme Toggle Button rotation */
+.theme-toggle-icon {
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.theme-toggle-btn:hover .theme-toggle-icon {
+  transform: rotate(30deg);
+}
+
+/* Custom organic bg */
+.organic-bg {
+  background: radial-gradient(circle at 10% 20%, rgba(0, 88, 188, 0.05) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(144, 38, 195, 0.06) 0%, transparent 40%),
+              radial-gradient(circle at 50% 50%, rgba(158, 61, 0, 0.03) 0%, transparent 50%);
+  background-color: var(--color-background);
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>About - Mohammad Ayan</title>
+    
+    <!-- CSS Dependencies -->
+    <link href="styles.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Immediate Theme Application script to prevent FOUC -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+                document.documentElement.classList.remove('light');
+            } else {
+                document.documentElement.classList.add('light');
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+    </script>
+
+    <!-- Tailwind Configuration -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "rgb(var(--color-background-rgb) / <alpha-value>)",
+                        "on-background": "rgb(var(--color-on-background-rgb) / <alpha-value>)",
+                        "surface": "rgb(var(--color-surface-rgb) / <alpha-value>)",
+                        "surface-dim": "rgb(var(--color-surface-dim-rgb) / <alpha-value>)",
+                        "surface-bright": "rgb(var(--color-surface-bright-rgb) / <alpha-value>)",
+                        "surface-container-lowest": "rgb(var(--color-surface-container-lowest-rgb) / <alpha-value>)",
+                        "surface-container-low": "rgb(var(--color-surface-container-low-rgb) / <alpha-value>)",
+                        "surface-container": "rgb(var(--color-surface-container-rgb) / <alpha-value>)",
+                        "surface-container-high": "rgb(var(--color-surface-container-high-rgb) / <alpha-value>)",
+                        "surface-container-highest": "rgb(var(--color-surface-container-highest-rgb) / <alpha-value>)",
+                        "on-surface": "rgb(var(--color-on-surface-rgb) / <alpha-value>)",
+                        "on-surface-variant": "rgb(var(--color-on-surface-variant-rgb) / <alpha-value>)",
+                        "primary": "rgb(var(--color-primary-rgb) / <alpha-value>)",
+                        "on-primary": "rgb(var(--color-on-primary-rgb) / <alpha-value>)",
+                        "primary-container": "rgb(var(--color-primary-container-rgb) / <alpha-value>)",
+                        "on-primary-container": "rgb(var(--color-on-primary-container-rgb) / <alpha-value>)",
+                        "secondary": "rgb(var(--color-secondary-rgb) / <alpha-value>)",
+                        "on-secondary": "rgb(var(--color-on-secondary-rgb) / <alpha-value>)",
+                        "secondary-container": "rgb(var(--color-secondary-container-rgb) / <alpha-value>)",
+                        "on-secondary-container": "rgb(var(--color-on-secondary-container-rgb) / <alpha-value>)",
+                        "tertiary": "rgb(var(--color-tertiary-rgb) / <alpha-value>)",
+                        "on-tertiary": "rgb(var(--color-on-tertiary-rgb) / <alpha-value>)",
+                        "outline": "rgb(var(--color-outline-rgb) / <alpha-value>)",
+                        "outline-variant": "rgb(var(--color-outline-variant-rgb) / <alpha-value>)"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "section-gap": "160px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Inter"],
+                        "display-xl-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["80px", { "lineHeight": "1.05", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-xl-mobile": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["13px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["20px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-md": ["17px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- JS Logic -->
+    <script src="main.js" defer></script>
+</head>
+<body class="antialiased selection:bg-primary-container selection:text-on-primary-container organic-bg">
+    <!-- TopNavBar -->
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[calc(100%-40px)] max-w-container-max rounded-full border border-white/20 bg-surface/40 dark:bg-surface-dim/40 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.04)] flex justify-between items-center px-8 py-3 z-50 transition-all duration-300">
+        <a class="font-display-xl text-headline-md tracking-tighter text-on-surface dark:text-inverse-on-surface scale-95 active:scale-90 transition-transform" href="index.html">AYAN</a>
+        <div class="hidden md:flex gap-8 items-center">
+            <a class="font-body-md text-body-md tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Work</a>
+            <a class="font-body-md text-body-md tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" href="skills.html">Skills</a>
+            <a class="font-body-md text-body-md tracking-wide text-primary dark:text-primary font-semibold border-b-2 border-primary pb-1 hover:opacity-80 transition-opacity" href="about.html">About</a>
+            <a class="font-body-md text-body-md tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <!-- Theme Toggle Button -->
+            <button class="theme-toggle-btn w-10 h-10 rounded-full border border-white/20 bg-white/10 dark:bg-black/10 flex items-center justify-center text-on-surface dark:text-inverse-on-surface hover:bg-white/20 dark:hover:bg-white/5 active:scale-90 transition-transform" aria-label="Toggle Dark Mode">
+                <span class="material-symbols-outlined theme-toggle-icon text-xl">dark_mode</span>
+            </button>
+            <a class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-sm text-label-sm tracking-wide hover:bg-primary-container hover:text-on-primary-container transition-colors scale-95 active:scale-90" href="contact.html">Hire Me</a>
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-btn md:hidden w-10 h-10 rounded-full border border-white/20 bg-white/10 dark:bg-black/10 flex items-center justify-center text-on-surface dark:text-inverse-on-surface hover:bg-white/20 active:scale-90 transition-transform" aria-label="Open Navigation Menu">
+                <span class="material-symbols-outlined text-xl">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-menu-overlay fixed inset-0 z-50 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 flex justify-end">
+        <div class="mobile-menu-panel w-72 h-full bg-white dark:bg-surface-dim/95 backdrop-blur-xl border-l border-white/10 p-6 flex flex-col justify-between transform translate-y-4 scale-95 transition-all duration-300">
+            <div>
+                <div class="flex justify-between items-center mb-12">
+                    <span class="font-display-xl text-headline-md tracking-tighter text-on-surface dark:text-inverse-on-surface">MENU</span>
+                    <button class="mobile-menu-close w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-on-surface-variant hover:bg-white/10 transition-colors">
+                        <span class="material-symbols-outlined text-xl">close</span>
+                    </button>
+                </div>
+                <nav class="flex flex-col gap-6">
+                    <a class="mobile-menu-link font-body-md text-xl tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Work</a>
+                    <a class="mobile-menu-link font-body-md text-xl tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" href="skills.html">Skills</a>
+                    <a class="mobile-menu-link font-body-md text-xl tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About</a>
+                    <a class="mobile-menu-link font-body-md text-xl tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contact</a>
+                </nav>
+            </div>
+            <div class="flex flex-col gap-4">
+                <button class="theme-toggle-btn w-full py-3 rounded-full border border-white/20 bg-white/10 dark:bg-black/10 flex items-center justify-center gap-2 text-on-surface dark:text-inverse-on-surface hover:bg-white/20 hover:scale-[1.02] active:scale-98 transition-all">
+                    <span class="material-symbols-outlined theme-toggle-icon">dark_mode</span>
+                    <span class="font-label-sm text-sm uppercase tracking-widest">Theme</span>
+                </button>
+                <a class="w-full text-center py-3 bg-primary text-on-primary rounded-full font-label-sm text-sm uppercase tracking-widest hover:opacity-90 transition-opacity" href="contact.html">Hire Me</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-[160px] pb-section-gap">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            
+            <!-- Hero Banner Section -->
+            <section class="relative rounded-3xl overflow-hidden mb-section-gap aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] reveal shadow-xl shadow-black/5 border border-white/10">
+                <img class="w-full h-full object-cover absolute inset-0 animate-fade-in" alt="Mohammad Ayan - Work Space Setup" src="my-setup.jpg"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4 md:p-8">
+                    <div class="glass-panel p-4 md:p-6 rounded-2xl max-w-sm sm:max-w-md bg-white/20 dark:bg-black/20 backdrop-blur-md border border-white/10 text-white shadow-lg">
+                        <h1 class="text-lg md:text-2xl font-bold tracking-tight text-white mb-2">Mohammad Ayan</h1>
+                        <p class="text-xs md:text-sm text-white/90 leading-relaxed">
+                            Full Stack Developer, Drone Specialist &amp; IIT Madras Data Science BS Student (2025 Batch).
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bio / Info Section -->
+            <section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap scroll-mt-24" id="philosophy">
+                <div class="md:col-span-4 flex flex-col justify-center reveal">
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">About Me</h2>
+                </div>
+                <div class="md:col-span-8 space-y-6 text-on-surface-variant font-body-lg text-lg reveal">
+                    <p>
+                        I am Mohammad Ayan, a Full Stack Developer &amp; Freelancer dedicated to designing premium web environments. I am currently pursuing my <strong>BS in Data Science</strong> at the prestigious <strong>IIT Madras (IITM)</strong> at the foundation level (Batch of 2025 student).
+                    </p>
+                    <p>
+                        In addition to web programming, my focus extends into advanced robotics. I have completed a hands-on internship with a drone-based technology company, where I focused on 3D Gazebo simulator configurations, drone flight coordinates, and autonomous microcontroller systems. 
+                    </p>
+                    <p>
+                        My research projects explore pioneering fields like <strong>quantum computing mobile drone vehicle signalling</strong> protocols and looking into <strong>how space programming operates</strong> to build fail-safe, redundant aerospace software architectures.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Experience & Education -->
+            <section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap">
+                <!-- Experience -->
+                <div class="md:col-span-6 reveal">
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Work Experience</h2>
+                    <ul class="space-y-6">
+                        <li class="border-b border-on-surface-variant/10 pb-6 flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-2">
+                            <div>
+                                <h4 class="font-headline-md text-headline-md text-on-surface text-xl">Drone Simulation Intern</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Drone-based Technology Company</p>
+                                <p class="font-body-md text-xs text-on-surface-variant/80 mt-1">Simulated flight control, programmed sensor nodes, and validated autonomous telemetry in Gazebo.</p>
+                            </div>
+                            <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full text-xs shrink-0 font-semibold">Internship</span>
+                        </li>
+                        <li class="border-b border-on-surface-variant/10 pb-6 flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-2">
+                            <div>
+                                <h4 class="font-headline-md text-headline-md text-on-surface text-xl">Quantum Signalling Researcher</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Independent Academic Research</p>
+                                <p class="font-body-md text-xs text-on-surface-variant/80 mt-1">Drafting protocols for quantum-based mobile drone communications and studying spacecraft fail-safe programming.</p>
+                            </div>
+                            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest bg-surface-container-high px-3 py-1 rounded-full text-xs shrink-0">Research</span>
+                        </li>
+                        <li class="border-b border-on-surface-variant/10 pb-6 flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-2">
+                            <div>
+                                <h4 class="font-headline-md text-headline-md text-on-surface text-xl">Freelance Full-Stack Developer</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Self-Employed</p>
+                                <p class="font-body-md text-xs text-on-surface-variant/80 mt-1">Designing and building websites using React, Node.js, Express, and MongoDB.</p>
+                            </div>
+                            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest bg-surface-container-high px-3 py-1 rounded-full text-xs shrink-0">Freelance</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <div class="md:col-span-6 md:pl-12 reveal mt-12 md:mt-0">
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Education</h2>
+                    <ul class="space-y-6">
+                        <li class="border-b border-on-surface-variant/10 pb-6 flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-2">
+                            <div>
+                                <h4 class="font-headline-md text-headline-md text-on-surface text-xl">BS in Data Science</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">IIT Madras (IITM)</p>
+                                <p class="font-body-md text-xs text-on-surface-variant/80 mt-1">Currently at the Foundation Level, acquiring concepts in algorithmic modelling and analytics.</p>
+                            </div>
+                            <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full text-xs shrink-0 font-semibold">Batch 2025</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Certifications & Core Values -->
+            <section class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                <!-- Certifications -->
+                <div class="md:col-span-6 reveal">
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Certifications</h2>
+                    <ul class="space-y-6">
+                        <li class="border-b border-on-surface-variant/10 pb-6 flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary text-3xl">workspace_premium</span>
+                            <div>
+                                <h4 class="font-headline-md text-headline-md text-on-surface text-xl">Google Professional Credentials</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Coursera Certified</p>
+                                <p class="font-body-md text-xs text-on-surface-variant/80 mt-1">Completed advanced Google modules in Web Development, IT automation, and cloud management.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Core Values -->
+                <div class="md:col-span-6 md:pl-12 reveal mt-12 md:mt-0">
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Core Values</h2>
+                    <ul class="space-y-6">
+                        <li class="border-b border-on-surface-variant/10 pb-6 flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary text-3xl">security</span>
+                            <div>
+                                <h4 class="font-headline-md text-headline-md text-on-surface text-xl">Fault-Tolerant Infrastructure</h4>
+                                <p class="font-body-md text-sm text-on-surface-variant">Applying space-grade programming paradigms to web backend and API systems to ensure high availability.</p>
+                            </div>
+                        </li>
+                        <li class="border-b border-on-surface-variant/10 pb-6 flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary text-3xl">satellite_alt</span>
+                            <div>
+                                <h4 class="font-headline-md text-headline-md text-on-surface text-xl">Signalling Optimization</h4>
+                                <p class="font-body-md text-sm text-on-surface-variant">Optimizing communications between client portals, server nodes, and simulated robotic drone systems.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-white/10 bg-surface-container-low/40 dark:bg-surface-container-highest/10 backdrop-blur-lg mt-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+            <p class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-on-surface-variant text-center md:text-left">
+                © 2026 Mohammad Ayan. Designed for clarity.
+            </p>
+            <div class="flex flex-wrap justify-center gap-8 font-label-sm text-label-sm uppercase tracking-[0.2em]">
+                <a class="text-on-surface-variant hover:text-primary transition-colors hover:opacity-70 transition-opacity" href="https://github.com/ajlaanayan-crypto" target="_blank" rel="noopener">GitHub</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors hover:opacity-70 transition-opacity" href="https://www.linkedin.com/in/mohammad-ayan-207643340" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors hover:opacity-70 transition-opacity" href="mailto:ajlaan.ayan@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
