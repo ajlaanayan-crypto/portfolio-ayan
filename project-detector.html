@@ -206,7 +206,7 @@
                         <p class="font-body-lg text-body-lg text-on-surface-variant">To combat hardware performance issues on the Raspberry Pi 4B, we tuned the input resolution (`imgsz=320`) and set an optimized confidence threshold (`conf=0.5`). Additionally, we implemented a custom camera stream frame-grabber to handle multi-threaded frame captures, preventing frame bottlenecks. These optimizations boosted performance from a laggy 1-2 FPS to a stable 8-10 FPS, enabling autonomous drone navigation and search and rescue telemetry.</p>
                     </div>
                     <!-- Highlight Feature Image -->
-                    <div class="w-full h-80 md:h-[450px] rounded-3xl overflow-hidden border border-white/20 shadow-xl relative group">
+                    <div class="img-wrap w-full h-80 md:h-[450px] rounded-3xl overflow-hidden border border-white/20 shadow-xl relative group">
                         <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Real-time TV detection display" src="images/detector-tv.png"/>
                     </div>
                 </div>
@@ -217,10 +217,10 @@
         <section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
             <h2 class="font-headline-lg text-3xl md:text-4xl text-on-surface mb-12 text-center reveal">Development &amp; Environment Exploration</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <div class="h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal">
+                <div class="img-wrap h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal">
                     <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Subsetting environment scripts layout" src="images/detector-code1.png"/>
                 </div>
-                <div class="h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal">
+                <div class="img-wrap h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal">
                     <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Python modules configuration code" src="images/detector-code2.png"/>
                 </div>
             </div>

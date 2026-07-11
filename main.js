@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initContactForm();
     initScrollReveal();
+    initImages();
 });
 
 /* ==========================================
@@ -251,4 +252,48 @@ function initScrollReveal() {
         // Fallback for older browsers
         revealElements.forEach(el => el.classList.add('active'));
     }
+}
+/* ==========================================
+   6. Image Lazy Loading + Skeleton System
+   ========================================== */
+function initImages() {
+    // Find all images inside .img-wrap containers
+    const wraps = document.querySelectorAll('.img-wrap');
+
+    wraps.forEach(wrap => {
+        const img = wrap.querySelector('img');
+        if (!img) return;
+
+        // Always use lazy loading for non-hero images
+        img.setAttribute('loading', 'lazy');
+        img.setAttribute('decoding', 'async');
+
+        const markLoaded = () => {
+            wrap.classList.add('loaded');
+            wrap.classList.remove('error');
+        };
+        const markError = () => {
+            wrap.classList.add('error');
+            wrap.classList.remove('loaded');
+        };
+
+        // If already cached and loaded
+        if (img.complete && img.naturalWidth > 0) {
+            markLoaded();
+        } else if (img.complete && img.naturalWidth === 0) {
+            markError();
+        } else {
+            img.addEventListener('load', markLoaded);
+            img.addEventListener('error', markError);
+        }
+    });
+
+    // Also handle bare images NOT in .img-wrap (hero absolute images)
+    // Give them lazy loading attributes for performance
+    document.querySelectorAll('img:not(.img-wrap img)').forEach(img => {
+        if (!img.hasAttribute('loading')) {
+            img.setAttribute('loading', 'lazy');
+            img.setAttribute('decoding', 'async');
+        }
+    });
 }

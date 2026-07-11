@@ -200,3 +200,68 @@ body {
               radial-gradient(circle at 50% 50%, rgba(158, 61, 0, 0.03) 0%, transparent 50%);
   background-color: var(--color-background);
 }
+
+/* ==========================================
+   Image Loading: Skeleton shimmer + fade-in
+   ========================================== */
+
+/* Skeleton shimmer on the image container while img hasn't loaded */
+.img-wrap {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-surface-container);
+}
+.img-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.12) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  transition: opacity 0.4s ease;
+}
+.img-wrap.loaded::before {
+  opacity: 0;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* Fade-in once image is loaded */
+.img-wrap img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+.img-wrap.loaded img {
+  opacity: 1;
+}
+
+/* Graceful error fallback - show a subtle icon instead of broken image */
+.img-wrap.error img {
+  opacity: 0;
+}
+.img-wrap.error::after {
+  content: '\e3f4'; /* Material Symbols: image_not_supported */
+  font-family: 'Material Symbols Outlined';
+  font-size: 2rem;
+  color: var(--color-outline);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  background: var(--color-surface-container-low);
+}
