@@ -266,7 +266,7 @@ body {
   background: var(--color-surface-container-low);
 }
 
-/* Continuous Auto-Scrolling Marquee */
+/* Continuous Auto-Scrolling Marquee - Mobile & Desktop Optimized */
 @keyframes marquee-scroll {
   from {
     transform: translate3d(0, 0, 0);
@@ -280,25 +280,44 @@ body {
   overflow: hidden;
   position: relative;
   width: 100%;
-  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  max-width: 100%;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  mask-image: linear-gradient(to right, transparent 0%, black 15px, black calc(100% - 15px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15px, black calc(100% - 15px), transparent 100%);
 }
 
 .marquee-track {
   display: flex;
   width: max-content;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .marquee-group {
   display: flex;
-  gap: 1rem;
-  padding-right: 1rem;
+  gap: 0.75rem;
+  padding-right: 0.75rem;
   flex-shrink: 0;
-  animation: marquee-scroll 26s linear infinite;
+  animation: marquee-scroll 24s linear infinite;
   will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  touch-action: pan-y;
 }
 
-.marquee-container:hover .marquee-group {
+@media (min-width: 768px) {
+  .marquee-group {
+    gap: 1rem;
+    padding-right: 1rem;
+    animation-duration: 28s;
+  }
+}
+
+.marquee-container:hover .marquee-group,
+.marquee-container.is-paused .marquee-group {
   animation-play-state: paused;
 }
 

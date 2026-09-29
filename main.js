@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initScrollReveal();
     initImages();
+    initMarqueeTouch();
 });
 
 /* ==========================================
@@ -298,3 +299,26 @@ function initImages() {
     });
 }
 
+/* ==========================================
+   7. Marquee Touch Optimization (Mobile)
+   ========================================== */
+function initMarqueeTouch() {
+    const marquee = document.querySelector('.marquee-container');
+    if (!marquee) return;
+
+    let touchTimeout;
+
+    marquee.addEventListener('touchstart', () => {
+        marquee.classList.add('is-paused');
+    }, { passive: true });
+
+    const resumeMarquee = () => {
+        clearTimeout(touchTimeout);
+        touchTimeout = setTimeout(() => {
+            marquee.classList.remove('is-paused');
+        }, 120);
+    };
+
+    marquee.addEventListener('touchend', resumeMarquee, { passive: true });
+    marquee.addEventListener('touchcancel', resumeMarquee, { passive: true });
+}
