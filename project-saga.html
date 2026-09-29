@@ -212,9 +212,9 @@
                         <p class="font-body-lg text-body-lg text-on-surface-variant">We built an <strong>Orchestration-based Saga System</strong> with strict database-per-service isolation (PostgreSQL, MongoDB, and Redis). The central Order Service acts as the Saga Orchestrator executing a Finite State Machine (FSM). To guarantee atomic state emission without distributed transactions, we implemented the <strong>Transactional Outbox Pattern</strong>: domain mutations and outgoing Kafka events are committed in the same local ACID transaction, with background workers streaming events to Kafka with zero dual-write vulnerabilities.</p>
                         <p class="font-body-lg text-body-lg text-on-surface-variant">To eliminate overselling during high-concurrency flash sales, the Inventory Service enforces <strong>Pessimistic Row-Level Locking (`SELECT ... FOR UPDATE`)</strong>, serializing concurrent reservations on contested SKUs while blocking race conditions in real time. For the Payment Service, atomic <strong>Redis `SETNX` distributed idempotency keys (24hr TTL)</strong> ensure duplicate webhooks or network retries never double-charge customers. If any downstream service fails (e.g., card declined or processor error), the orchestrator automatically triggers compensating transactions—restoring reserved stock in under 45ms with zero data leakage.</p>
                     </div>
-                    <!-- Highlight Feature Image -->
-                    <div class="img-wrap w-full h-80 md:h-[450px] rounded-3xl overflow-hidden border border-white/20 shadow-xl relative group">
-                        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Distributed Saga Architecture Blueprint" src="images/saga-arch.png"/>
+                    <!-- Highlight Feature Image: Live Saga Pipeline Rollback Demo -->
+                    <div class="img-wrap w-full h-80 md:h-[450px] rounded-3xl overflow-hidden border border-white/20 shadow-xl relative group bg-slate-900/40 flex items-center justify-center p-2">
+                        <img class="w-full h-full object-contain rounded-2xl transition-transform duration-700 group-hover:scale-105" alt="Live Saga Pipeline Compensating Rollback Demo" src="images/saga-fsm.png"/>
                     </div>
                 </div>
             </div>
@@ -222,13 +222,13 @@
 
         <!-- Gallery Section -->
         <section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
-            <h2 class="font-headline-lg text-3xl md:text-4xl text-on-surface mb-12 text-center reveal">Concurrency Benchmarks &amp; Rollback State Machine</h2>
+            <h2 class="font-headline-lg text-3xl md:text-4xl text-on-surface mb-12 text-center reveal">Live Storefront &amp; Kafka Event Stream Console</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <div class="img-wrap h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal">
-                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Flash Sale Bot Race and Row-Level Locking Stress Test" src="images/saga-concurrency.png"/>
+                <div class="img-wrap h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal bg-slate-900/40 flex items-center justify-center p-2">
+                    <img class="w-full h-full object-contain rounded-2xl transition-transform duration-700 group-hover:scale-105" alt="Storefront Product Catalog and High-Concurrency Benchmark" src="images/saga-concurrency.png"/>
                 </div>
-                <div class="img-wrap h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal">
-                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Saga Finite State Machine and Redis Idempotency Defense" src="images/saga-fsm.png"/>
+                <div class="img-wrap h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal bg-slate-900/40 flex items-center justify-center p-2">
+                    <img class="w-full h-full object-contain rounded-2xl transition-transform duration-700 group-hover:scale-105" alt="Kafka Event Stream Console with Live Rollback Events" src="images/saga-arch.png"/>
                 </div>
             </div>
             <!-- Back to Work Trigger -->
