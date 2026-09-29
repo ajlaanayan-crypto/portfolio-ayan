@@ -138,26 +138,48 @@ body {
   transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* Liquid Glass Navigation Bar - Ultra Transparent & Crystal Clear */
+/* Real-Time Liquid Glass Navigation Bar (Apple Material Blur & Heavy Saturation) */
 .navbar,
 nav.fixed {
-  background-color: rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(18px) saturate(200%) !important;
-  -webkit-backdrop-filter: blur(18px) saturate(200%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.28) !important;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 0 rgba(255, 255, 255, 0.1) !important;
+  /* Exact Apple system material blur aur heavy saturation */
+  backdrop-filter: blur(30px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(30px) saturate(200%) !important;
+
+  /* Light theme: transparent crystal glass */
+  background-color: rgba(255, 255, 255, 0.35) !important;
+
+  /* Premium glass edge ke liye ekdam patla aur halka border */
+  border: 0.5px solid rgba(255, 255, 255, 0.35) !important;
+
+  /* 3D depth ke liye halka sa shadow aur subtle top rim highlight */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+
+  /* Rounded corners jaisa liquid pill me hai */
   border-radius: 50px !important;
-  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+
+  /* Z-index high rakhein taaki navbar hamesha upar rahe */
+  z-index: 1000 !important;
+
+  will-change: backdrop-filter;
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .dark .navbar,
 .dark nav.fixed {
-  background-color: rgba(18, 18, 22, 0.22) !important;
-  backdrop-filter: blur(18px) saturate(200%) !important;
-  -webkit-backdrop-filter: blur(18px) saturate(200%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.18), inset 0 -1px 0 rgba(255, 255, 255, 0.05) !important;
+  /* Opacity 0.25 taaki dark overlay na aaye aur glass ekdam clear lage */
+  background-color: rgba(20, 20, 20, 0.25) !important;
+
+  /* Exact Apple system material blur aur heavy saturation */
+  backdrop-filter: blur(30px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(30px) saturate(200%) !important;
+
+  /* Glass ke edges par halki reflection dene ke liye */
+  border: 0.5px solid rgba(255, 255, 255, 0.15) !important;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 0.5px 0 rgba(255, 255, 255, 0.18) !important;
+
   border-radius: 50px !important;
+  z-index: 1000 !important;
 }
 
 /* Clean bottom outline input styling */
