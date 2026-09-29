@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>RelayCore (NexusFlag) - Project Detail</title>
+    <title>NexusFlag - Project Detail</title>
     
     <!-- CSS Dependencies -->
     <link href="styles.css" rel="stylesheet"/>
@@ -154,15 +154,15 @@
         <!-- Hero Section -->
         <section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto mb-16 md:mb-section-gap animate-fade-in">
             <div class="relative w-full h-[400px] md:h-[650px] rounded-3xl overflow-hidden shadow-2xl border border-white/15">
-                <img class="absolute inset-0 w-full h-full object-cover" alt="RelayCore NexusFlag Control Plane Dashboard" src="images/relaycore-hero.png"/>
+                <img class="absolute inset-0 w-full h-full object-cover" alt="NexusFlag Distributed Control Center Dashboard" src="images/nexusflag-hero.png"/>
                 <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-transparent to-transparent"></div>
                 <div class="absolute bottom-8 left-8 right-8 md:bottom-12 md:left-12 p-5 md:p-6 bg-surface-container-low/85 dark:bg-black/50 backdrop-blur-xl rounded-2xl border border-white/20 dark:border-white/10 max-w-xl">
                     <div class="mb-4 flex flex-wrap gap-2">
                         <span class="px-4 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-xs uppercase tracking-[0.2em] font-semibold">Distributed Systems</span>
-                        <span class="px-4 py-1 rounded-full bg-surface-container-high/80 text-on-surface-variant font-label-sm text-xs uppercase tracking-[0.2em]">2026</span>
+                        <span class="px-4 py-1 rounded-full bg-surface-container-high/80 text-on-surface-variant font-label-sm text-xs uppercase tracking-[0.2em]">Feature Orchestration</span>
                     </div>
-                    <h1 class="font-display-xl text-3xl md:text-5xl text-on-surface mb-4 leading-none tracking-tight">RelayCore (NexusFlag)</h1>
-                    <p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant">Enterprise distributed feature orchestration &amp; remote configuration engine with sub-microsecond in-memory AST evaluation.</p>
+                    <h1 class="font-display-xl text-3xl md:text-5xl text-on-surface mb-4 leading-none tracking-tight">NexusFlag (Enterprise Engine)</h1>
+                    <p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant">Zero-Network Distributed Feature Orchestration &amp; Remote Configuration Engine with Sub-Microsecond In-Memory AST Evaluation.</p>
                 </div>
             </div>
         </section>
@@ -174,7 +174,7 @@
                 <div class="md:col-span-4 flex flex-col gap-8 reveal">
                     <div class="p-8 rounded-3xl bg-surface-container-low/40 dark:bg-surface-container-highest/10 backdrop-blur-lg border border-white/10">
                         <h3 class="font-headline-md text-2xl text-on-surface mb-6">The Challenge</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">Traditional feature flagging architectures incur 50–200ms network roundtrips per check or run polling loops that strain backend infrastructure. High-scale microservices processing hundreds of thousands of requests per second require deterministic flag checks to run synchronously in host RAM in under 1 microsecond, while still allowing global invalidations (&lt;100ms) without outbound network calls during critical user paths.</p>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">Traditional feature flagging architectures incur 50–200ms external network roundtrips per check or rely on polling loops that overload backend clusters. Mission-critical microservices handling hundreds of thousands of concurrent requests require deterministic flag evaluations to resolve in host RAM in under 1 microsecond, with global invalidations streamed across edge proxies in under 15ms without network calls during user requests.</p>
                         <div class="space-y-6 pt-6 border-t border-on-surface-variant/10">
                             <div>
                                 <h4 class="font-label-sm text-xs uppercase tracking-[0.2em] text-outline mb-2">Role</h4>
@@ -182,21 +182,21 @@
                             </div>
                             <div>
                                 <h4 class="font-label-sm text-xs uppercase tracking-[0.2em] text-outline mb-2">Timeline</h4>
-                                <p class="font-body-md text-body-md text-on-surface">3 Months (Core Engine)</p>
+                                <p class="font-body-md text-body-md text-on-surface">3 Months (Core Engine &amp; Edge Relays)</p>
                             </div>
                             <div>
                                 <h4 class="font-label-sm text-xs uppercase tracking-[0.2em] text-outline mb-2">Stack / Tools</h4>
                                 <ul class="font-body-md text-body-md text-on-surface space-y-1">
-                                    <li>Go &amp; Node.js 24 (High-Concurrency Engine)</li>
-                                    <li>TypeScript 5.7 &amp; Next.js 15 (Control Plane)</li>
-                                    <li>HTTP/2 Server-Sent Events (SSE Streaming)</li>
-                                    <li>Redis Cluster Pub/Sub (Delta Invalidation)</li>
-                                    <li>PostgreSQL (Durable Source of Truth)</li>
-                                    <li>MurmurHash3 (Monotonic Rollout Bucketing)</li>
+                                    <li>Next.js 15 &amp; React 19 (Control Plane)</li>
+                                    <li>TypeScript 5.7 &amp; Node.js 22 (In-Memory Engine &amp; SDKs)</li>
+                                    <li>HTTP/2 Server-Sent Events (SSE Edge Relays)</li>
+                                    <li>Redis Cluster Pub/Sub (Delta Patches &lt;1KB)</li>
+                                    <li>MurmurHash3 32-Bit (Monotonic Rollouts)</li>
+                                    <li>AES-256 Encrypted Disk Snapshots (Cold Boot)</li>
                                 </ul>
                             </div>
                             <div class="pt-6 border-t border-on-surface-variant/10">
-                                <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-full font-label-sm text-xs uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all shadow-md shadow-primary/10" href="https://github.com/ajlaanayan-crypto/RelayCore" target="_blank" rel="noopener">
+                                <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-full font-label-sm text-xs uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all shadow-md shadow-primary/10" href="https://github.com/ajlaanayan-crypto/NexusFlag" target="_blank" rel="noopener">
                                     <span class="material-symbols-outlined text-base">code</span>
                                     View on GitHub
                                 </a>
@@ -209,12 +209,12 @@
                 <div class="md:col-span-8 flex flex-col justify-between gap-12 reveal">
                     <div class="space-y-6">
                         <h2 class="font-headline-lg text-3xl md:text-4xl text-on-surface leading-tight">Implementation Details</h2>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant">We architected RelayCore with a strictly decoupled <strong>Control Plane</strong> (Next.js 15 management console) and <strong>Data Plane</strong> (@nexusflag/sdk). Rule sets are compiled into an in-memory Abstract Syntax Tree (AST) cached directly in host process RAM. Every flag evaluation traverses a deterministic priority ladder in <strong>~0.70µs</strong>: checking emergency circuit breakers, explicit whitelists, boolean rule predicates, and MurmurHash3 percentages with zero external network overhead.</p>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant">Downstream synchronization is handled by lightweight Edge Relay Proxies leveraging persistent HTTP/2 Server-Sent Events (SSE). When changes are committed, Redis Pub/Sub broadcasts incremental delta patches (&lt;1KB) across thousands of connected SDK clients in under 15ms. To protect production workloads against network partitions, the engine persists encrypted local disk snapshots (AES-256) for instant cold boots, while the Poison Pill Guard sandboxes regex evaluations to prevent host runtime crashes.</p>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">We architected <strong>NexusFlag</strong> with a strictly decoupled <strong>Control Plane</strong> (Next.js 15 management console) and <strong>Data Plane</strong> (@nexusflag/sdk). Rule sets compile into an in-memory Abstract Syntax Tree (AST) cached directly in host process RAM. Every flag evaluation traverses a deterministic priority ladder in <strong>~0.70µs (benchmarked to 0.20µs)</strong>: executing panic circuit breakers, explicit target lists, boolean rule predicates, and MurmurHash3 percentages with zero external network overhead.</p>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">Downstream synchronization is handled by lightweight Edge Relay Proxies leveraging persistent <strong>HTTP/2 Server-Sent Events (SSE)</strong>. When changes are committed, Redis Pub/Sub broadcasts incremental delta patches (&lt;1KB) across thousands of connected SDK clients in under 15ms. Monotonic rollout stability ensures that scaling a rollout from 10% to 25% preserves 100% of the existing user cohort without hash collisions across independent flag salts.</p>
                     </div>
-                    <!-- Highlight Feature Image -->
+                    <!-- Highlight Feature Image: In-Memory SDK Test Bench -->
                     <div class="img-wrap w-full h-80 md:h-[450px] rounded-3xl overflow-hidden border border-white/20 shadow-xl relative group">
-                        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="RelayCore Distributed Architecture Blueprint" src="images/relaycore-arch.png"/>
+                        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="In-Memory SDK Test Bench and Hash Inspector" src="images/nexusflag-sdk.png"/>
                     </div>
                 </div>
             </div>
@@ -222,13 +222,13 @@
 
         <!-- Gallery Section -->
         <section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
-            <h2 class="font-headline-lg text-3xl md:text-4xl text-on-surface mb-12 text-center reveal">System Architecture &amp; Analytics</h2>
+            <h2 class="font-headline-lg text-3xl md:text-4xl text-on-surface mb-12 text-center reveal">Dynamic Targeting Rules &amp; Audit Trail Ledger</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <div class="img-wrap h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal">
-                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Canary Telemetry and MurmurHash3 Uniformity" src="images/relaycore-canary.png"/>
+                <div class="img-wrap h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal bg-slate-900/40 flex items-center justify-center p-2">
+                    <img class="w-full h-full object-contain rounded-2xl transition-transform duration-700 group-hover:scale-105" alt="In-Memory AST Targeting Rules Builder" src="images/nexusflag-rules.png"/>
                 </div>
-                <div class="img-wrap h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal">
-                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="In-Memory AST Rule Builder and Circuit Breaker" src="images/relaycore-rules.png"/>
+                <div class="img-wrap h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal bg-slate-900/40 flex items-center justify-center p-2">
+                    <img class="w-full h-full object-contain rounded-2xl transition-transform duration-700 group-hover:scale-105" alt="Real-Time Audit Trail Ledger and Rollout Status" src="images/nexusflag-audit.png"/>
                 </div>
             </div>
             <!-- Back to Work Trigger -->
