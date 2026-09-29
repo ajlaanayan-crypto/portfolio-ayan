@@ -212,9 +212,9 @@
                         <p class="font-body-lg text-body-lg text-on-surface-variant">We architected <strong>ISRO SatQuery AI</strong> as an end-to-end multimodal geospatial intelligence platform. The frontend features a <strong>dual-panel synchronized GIS canvas</strong> built with Mapbox GL JS and Next.js 15, synchronizing viewport coordinates, pan, pitch, and zoom levels across baseline Optical (T1) and monitoring SAR (T2) scenes with dynamic opacity sliders and real-time latitude/longitude tracking.</p>
                         <p class="font-body-lg text-body-lg text-on-surface-variant">The backend is orchestrated by a <strong>LangGraph cyclic agentic state machine</strong> connected to FastAPI. Natural language queries (*"Analyze glacial recession and water bodies"*) are routed through an intent classifier to specialized vision tools: a <strong>PyTorch Difference U-Net</strong> neural segmentation model running sub-second change detection inference (F1-score: 0.924, latency: 148ms), sub-pixel GDAL co-registration (RMS error &lt; 0.12px), and a raster-to-GeoJSON polygonizer that injects interactive multi-polygons directly into the web map. An automated mission report tool generates downloadable PDF briefings with geospatial charts and hazard classifications.</p>
                     </div>
-                    <!-- Highlight Feature Image -->
+                    <!-- Highlight Feature Image: Dual-Map GIS Workspace -->
                     <div class="img-wrap w-full h-80 md:h-[450px] rounded-3xl overflow-hidden border border-white/20 shadow-xl relative group">
-                        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Multimodal Remote Sensing Neural Pipeline Architecture" src="images/satquery-pipeline.png"/>
+                        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Dual-Panel GIS Workspace with Spectral Pixel Probe" src="images/satquery-gis.png"/>
                     </div>
                 </div>
             </div>
@@ -222,13 +222,13 @@
 
         <!-- Gallery Section -->
         <section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
-            <h2 class="font-headline-lg text-3xl md:text-4xl text-on-surface mb-12 text-center reveal">Geospatial Analytics &amp; Explainable AI Execution Trace</h2>
+            <h2 class="font-headline-lg text-3xl md:text-4xl text-on-surface mb-12 text-center reveal">Mission Control &amp; Analytical Workflows</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <div class="img-wrap h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal">
-                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Bi-Temporal Geospatial Change Detection and Spectral Indices" src="images/satquery-gis.png"/>
+                <div class="img-wrap h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal bg-slate-900/40 flex items-center justify-center p-2">
+                    <img class="w-full h-full object-contain rounded-2xl transition-transform duration-700 group-hover:scale-105" alt="Mission Command Chat and Analytical Metrics" src="images/satquery-agent.png"/>
                 </div>
-                <div class="img-wrap h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal">
-                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="LangGraph Agentic Execution Trace and Mission Command Chat" src="images/satquery-agent.png"/>
+                <div class="img-wrap h-80 md:h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-lg relative group reveal bg-slate-900/40 flex items-center justify-center p-2">
+                    <img class="w-full h-full object-contain rounded-2xl transition-transform duration-700 group-hover:scale-105" alt="Remote Sensing Data Ingest and Benchmark Datasets" src="images/satquery-pipeline.png"/>
                 </div>
             </div>
             <!-- Back to Work Trigger -->
