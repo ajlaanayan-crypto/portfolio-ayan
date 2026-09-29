@@ -159,6 +159,7 @@
                 <div class="absolute bottom-8 left-8 right-8 md:bottom-12 md:left-12 p-5 md:p-6 bg-surface-container-low/85 dark:bg-black/50 backdrop-blur-xl rounded-2xl border border-white/20 dark:border-white/10 max-w-xl">
                     <div class="mb-4 flex flex-wrap gap-2">
                         <span class="px-4 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-xs uppercase tracking-[0.2em] font-semibold">Full Stack &amp; AI</span>
+                        <span class="px-4 py-1 rounded-full bg-amber-500/20 text-amber-500 dark:text-amber-400 font-label-sm text-xs uppercase tracking-[0.2em] font-semibold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>Active Development</span>
                         <span class="px-4 py-1 rounded-full bg-surface-container-high/80 text-on-surface-variant font-label-sm text-xs uppercase tracking-[0.2em]">2026</span>
                     </div>
                     <h1 class="font-display-xl text-3xl md:text-5xl text-on-surface mb-4 leading-none tracking-tight">Fintech Trading Analysis</h1>
@@ -182,7 +183,11 @@
                             </div>
                             <div>
                                 <h4 class="font-label-sm text-xs uppercase tracking-[0.2em] text-outline mb-2">Timeline</h4>
-                                <p class="font-body-md text-body-md text-on-surface">3 Months</p>
+                                <p class="font-body-md text-body-md text-on-surface font-semibold">4th Jan 2026 – Present</p>
+                                <p class="text-xs text-amber-500 dark:text-amber-400 mt-1 flex items-center gap-1">
+                                    <span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                                    Active Development • Solutions in Progress
+                                </p>
                             </div>
                             <div>
                                 <h4 class="font-label-sm text-xs uppercase tracking-[0.2em] text-outline mb-2">Stack / Tools</h4>
@@ -215,6 +220,178 @@
                     <div class="img-wrap w-full h-80 md:h-[450px] rounded-3xl overflow-hidden border border-white/20 shadow-xl relative group">
                         <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Market Overview and Top Movers" src="images/fintech-overview.png"/>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Engineering Challenges & Active Investigation (WIP) Section -->
+        <section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto mb-16 md:mb-section-gap reveal">
+            <div class="p-8 md:p-12 rounded-3xl bg-surface-container-low/40 dark:bg-surface-container-highest/10 backdrop-blur-lg border border-amber-500/20 shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-6 border-b border-white/10">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-500 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
+                                Active Engineering Status
+                            </span>
+                            <span class="text-xs text-outline font-label-sm uppercase tracking-wider">Started 4th Jan 2026 &bull; Ongoing Work</span>
+                        </div>
+                        <h2 class="font-headline-lg text-3xl md:text-4xl text-on-surface leading-tight">Current Challenges &amp; Bottlenecks Under Active Research</h2>
+                    </div>
+                    <p class="text-sm text-on-surface-variant max-w-md">
+                        This system is actively evolving. Transparently documenting real-world technical debt, edge cases, and architectural hurdles where solutions are currently being engineered.
+                    </p>
+                </div>
+
+                <!-- Challenges Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Challenge 1: UI / UX Layout & Viewport Scaling -->
+                    <div class="p-6 rounded-2xl bg-surface-container-low/60 dark:bg-black/30 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-500 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-xl">dashboard_customize</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold">1. UI Layout &amp; Responsive Viewport Scaling</h3>
+                                    <span class="text-xs text-rose-400 font-label-sm uppercase tracking-wider">Issue: Inconsistent Mobile / Terminal Layouts</span>
+                                </div>
+                            </div>
+                            <ul class="text-sm text-on-surface-variant space-y-2 mb-4">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-rose-500 mt-0.5">•</span>
+                                    <span><strong>High-Density Clutter:</strong> The trading terminal multi-pane grid (order book, chart, technical metrics, AI panel) overflows on tablet and mobile viewports, requiring awkward horizontal scrolling.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-rose-500 mt-0.5">•</span>
+                                    <span><strong>Glassmorphism Readability:</strong> Dynamic 3D mesh background creates contrast degradation behind volatile price numbers in certain lighting conditions and mobile browser engines.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-rose-500 mt-0.5">•</span>
+                                    <span><strong>Layout Shift:</strong> Streaming dynamic quote variations cause micro-shifts in adjoining component boundaries before fixed aspect constraints settle.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-white/10">
+                            <span class="text-xs text-amber-500 dark:text-amber-400 font-semibold uppercase tracking-wider block mb-1">🛠️ Solution in Progress:</span>
+                            <p class="text-xs text-on-surface-variant">Designing collapsible off-canvas drawer panels for mobile viewports, introducing strict CSS subgrid aspect clamps, and creating an adaptive high-contrast overlay mode.</p>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 2: Google Gemini AI Integration Bottlenecks -->
+                    <div class="p-6 rounded-2xl bg-surface-container-low/60 dark:bg-black/30 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-xl">psychology</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold">2. Google Gemini AI Context &amp; Rate Limits</h3>
+                                    <span class="text-xs text-amber-400 font-label-sm uppercase tracking-wider">Issue: Rate Throttling &amp; Inference Latency</span>
+                                </div>
+                            </div>
+                            <ul class="text-sm text-on-surface-variant space-y-2 mb-4">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-amber-500 mt-0.5">•</span>
+                                    <span><strong>Rate-Limit Throttling:</strong> Rapid stock switching and volatile headline surges occasionally trigger Google Gemini API <code>429 Too Many Requests</code> when users request instant analysis across multiple tickers.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-amber-500 mt-0.5">•</span>
+                                    <span><strong>Context Window Saturation:</strong> Appending dense historical OHLC ticks, EMA/RSI indicators, and full financial news articles together stretches token boundaries and dilutes sentiment precision.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-amber-500 mt-0.5">•</span>
+                                    <span><strong>Latency Gap (1.5s – 3.5s):</strong> Natural language generation latency creates a lag between instant real-time price fluctuations and corresponding AI sentiment tags.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-white/10">
+                            <span class="text-xs text-amber-500 dark:text-amber-400 font-semibold uppercase tracking-wider block mb-1">🛠️ Solution in Progress:</span>
+                            <p class="text-xs text-on-surface-variant">Implementing Server-Sent Events (SSE) streaming with Gemini 1.5 Flash, strict JSON Schema output enforcement, and an intelligent Redis-based sentiment cache with token budgeting.</p>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 3: Financial Charting & Canvas Drops -->
+                    <div class="p-6 rounded-2xl bg-surface-container-low/60 dark:bg-black/30 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-xl">candlestick_chart</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold">3. Candlestick &amp; Indicator Graph Bottlenecks</h3>
+                                    <span class="text-xs text-blue-400 font-label-sm uppercase tracking-wider">Issue: Canvas Frame Drops on Heavy Datasets</span>
+                                </div>
+                            </div>
+                            <ul class="text-sm text-on-surface-variant space-y-2 mb-4">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-500 mt-0.5">•</span>
+                                    <span><strong>High-Tick Frame Drops:</strong> Rendering &gt;10,000 real-time candlestick ticks on standard Chart.js canvas drops UI frame rates below 30 FPS during rapid market open surges.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-500 mt-0.5">•</span>
+                                    <span><strong>Indicator Calculation Overhead:</strong> Simultaneously computing and drawing multi-period overlays (Bollinger Bands, 50/200 EMA, VWAP, RSI) blocks the main browser thread.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-500 mt-0.5">•</span>
+                                    <span><strong>Auto-Scaling Jitter:</strong> Sudden price spikes cause sudden Y-axis rescaling jumps that disrupt user focus during active technical inspection.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-white/10">
+                            <span class="text-xs text-amber-500 dark:text-amber-400 font-semibold uppercase tracking-wider block mb-1">🛠️ Solution in Progress:</span>
+                            <p class="text-xs text-on-surface-variant">Benchmarking migration to TradingView Lightweight Charts (WebGL/Canvas hardware-accelerated pipeline) and offloading math calculations to dedicated Web Workers.</p>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 4: Visuals & Live Data Desynchronization -->
+                    <div class="p-6 rounded-2xl bg-surface-container-low/60 dark:bg-black/30 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-xl">sync_problem</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold">4. Live Visual Desynchronization &amp; GPU Load</h3>
+                                    <span class="text-xs text-purple-400 font-label-sm uppercase tracking-wider">Issue: Stream Race Conditions &amp; 3D Overhead</span>
+                                </div>
+                            </div>
+                            <ul class="text-sm text-on-surface-variant space-y-2 mb-4">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-purple-500 mt-0.5">•</span>
+                                    <span><strong>Telemetry Desync:</strong> Polling delays between the marquee ticker tape, main price card, and order book cause brief 200–500ms price discrepancies during high-velocity updates.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-purple-500 mt-0.5">•</span>
+                                    <span><strong>GPU Resource Contention:</strong> The Three.js / Vanta.js 3D net animation continually occupies GPU shaders, compounding frame stutter on integrated laptop graphics cards.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-purple-500 mt-0.5">•</span>
+                                    <span><strong>State Jitter:</strong> Rapid state dispatching without debouncing causes micro-flicker across the glassmorphism header and volume bars.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-white/10">
+                            <span class="text-xs text-amber-500 dark:text-amber-400 font-semibold uppercase tracking-wider block mb-1">🛠️ Solution in Progress:</span>
+                            <p class="text-xs text-on-surface-variant">Unifying data channels under a single WebSocket gateway with synchronized sequence IDs, and auto-pausing the 3D Vanta background when tab focus is lost or FPS falls below 55.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Summary Banner -->
+                <div class="mt-8 p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-amber-500 text-2xl">pending_actions</span>
+                        <p class="text-sm text-on-surface">
+                            <strong>Engineering Status:</strong> Ongoing sprint cycles actively resolving these architectural bottlenecks. Solutions under continuous testing and iteration.
+                        </p>
+                    </div>
+                    <span class="px-4 py-1.5 rounded-full bg-amber-500/20 text-amber-500 dark:text-amber-400 text-xs font-semibold uppercase tracking-widest whitespace-nowrap">
+                        Work in Progress
+                    </span>
                 </div>
             </div>
         </section>
