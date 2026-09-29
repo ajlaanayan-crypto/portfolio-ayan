@@ -169,120 +169,126 @@
         </div>
     </header>
 
-    <!-- Core Domains & Credentials Horizontal Carousel -->
-    <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-24 reveal">
-        <!-- Section Header with Controls -->
-        <div class="flex items-center justify-between mb-6">
-            <div>
-                <span class="font-label-sm text-xs uppercase tracking-[0.2em] text-primary font-semibold block mb-1">Expertise &amp; Credentials</span>
-                <h2 class="font-headline-md text-2xl md:text-3xl text-on-surface">Core Specializations</h2>
-            </div>
-            <!-- Navigation Arrow Controls -->
-            <div class="flex items-center gap-2">
-                <button id="carousel-prev" class="w-10 h-10 rounded-full border border-white/15 bg-surface-container-low/40 dark:bg-white/5 hover:bg-white/15 flex items-center justify-center text-on-surface transition-all active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" aria-label="Previous card">
-                    <span class="material-symbols-outlined text-lg">arrow_back</span>
-                </button>
-                <button id="carousel-next" class="w-10 h-10 rounded-full border border-white/15 bg-surface-container-low/40 dark:bg-white/5 hover:bg-white/15 flex items-center justify-center text-on-surface transition-all active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" aria-label="Next card">
-                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                </button>
-            </div>
-        </div>
-
-        <!-- Horizontal Scrollable Track -->
-        <div id="skills-carousel" class="flex gap-5 overflow-x-auto no-scrollbar scroll-smooth py-3 px-1 cursor-grab active:cursor-grabbing select-none snap-x snap-mandatory">
-            <!-- Card 1: IIT Madras BS -->
-            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-2xl">school</span>
+    <!-- Key Skill Quick Highlights - Smooth Auto-Scrolling Marquee -->
+    <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-20 reveal overflow-hidden">
+        <div class="marquee-container py-3">
+            <div class="marquee-track">
+                <!-- Set 1 -->
+                <div class="marquee-group">
+                    <!-- Card 1: IIT Madras BS -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">school</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">IIT Madras BS</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">Data Science Program</p>
                     </div>
-                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Academics &bull; 2025 Batch</span>
-                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">IIT Madras BS</h3>
-                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">BS in Data Science &amp; Applications with a focus on statistical modeling and systems.</p>
+
+                    <!-- Card 2: NexusFlag Engine -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">hub</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">NexusFlag Engine</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">Distributed Systems</p>
+                    </div>
+
+                    <!-- Card 3: Full Stack Web -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">code_blocks</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">Full Stack Web</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">React 19 &amp; Next.js</p>
+                    </div>
+
+                    <!-- Card 4: Gemini AI -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">psychology</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">Gemini AI</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">LLMs &amp; Prompt Cache</p>
+                    </div>
+
+                    <!-- Card 5: Satellite GIS -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">satellite_alt</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">Satellite GIS</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">ISRO Geospatial AI</p>
+                    </div>
+
+                    <!-- Card 6: Saga Engine -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">sync_alt</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">Saga Engine</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">Distributed Workflow</p>
+                    </div>
+
+                    <!-- Card 7: Sub-1µs Latency -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">bolt</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">Sub-1µs Latency</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">MurmurHash3 Engine</p>
+                    </div>
+
+                    <!-- Card 8: Google Certified -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">workspace_premium</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">Google Certified</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">Data &amp; Cloud Analytics</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Card 2: Distributed Systems (NexusFlag) -->
-            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-2xl">hub</span>
+                <!-- Set 2 (Exact Duplicate for Infinite Loop) -->
+                <div class="marquee-group" aria-hidden="true">
+                    <!-- Card 1: IIT Madras BS -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">school</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">IIT Madras BS</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">Data Science Program</p>
                     </div>
-                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Distributed Systems</span>
-                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">NexusFlag Engine</h3>
-                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Zero-network in-memory AST rule evaluation with sub-15ms HTTP/2 SSE edge invalidation.</p>
-                </div>
-            </div>
 
-            <!-- Card 3: Full Stack Engineering -->
-            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-2xl">code_blocks</span>
+                    <!-- Card 2: NexusFlag Engine -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">hub</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">NexusFlag Engine</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">Distributed Systems</p>
                     </div>
-                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Architecture &bull; React 19</span>
-                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">Full Stack Web</h3>
-                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Next.js 16, TypeScript, Node.js, and high-concurrency PostgreSQL &amp; MongoDB architectures.</p>
-                </div>
-            </div>
 
-            <!-- Card 4: Generative AI & Gemini -->
-            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-2xl">psychology</span>
+                    <!-- Card 3: Full Stack Web -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">code_blocks</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">Full Stack Web</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">React 19 &amp; Next.js</p>
                     </div>
-                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Generative AI &bull; LLMs</span>
-                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">Gemini Integration</h3>
-                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Real-time market sentiment streaming, prompt caching, and structured schema outputs.</p>
-                </div>
-            </div>
 
-            <!-- Card 5: Geo-Spatial AI / ISRO -->
-            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-2xl">satellite_alt</span>
+                    <!-- Card 4: Gemini AI -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">psychology</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">Gemini AI</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">LLMs &amp; Prompt Cache</p>
                     </div>
-                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Geo-Spatial &bull; ISRO</span>
-                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">Satellite GIS &amp; AI</h3>
-                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Orbital telemetry calculation, Cesium 3D geospatial rendering, and raster metadata queries.</p>
-                </div>
-            </div>
 
-            <!-- Card 6: Saga Orchestration -->
-            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-2xl">sync_alt</span>
+                    <!-- Card 5: Satellite GIS -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">satellite_alt</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">Satellite GIS</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">ISRO Geospatial AI</p>
                     </div>
-                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Event-Driven Architecture</span>
-                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">Saga Orchestrator</h3>
-                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Choreographed distributed transactions with Kafka, Redis Pub/Sub, and auto-compensating rollback.</p>
-                </div>
-            </div>
 
-            <!-- Card 7: Ultra-Low Latency Caching -->
-            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-2xl">bolt</span>
+                    <!-- Card 6: Saga Engine -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">sync_alt</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">Saga Engine</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">Distributed Workflow</p>
                     </div>
-                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Ultra-Low Latency</span>
-                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">Sub-1µs Evaluation</h3>
-                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">In-memory bitwise MurmurHash3 bucketing, lock-free ring buffers, and fast state machines.</p>
-                </div>
-            </div>
 
-            <!-- Card 8: Google Certified -->
-            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-2xl">workspace_premium</span>
+                    <!-- Card 7: Sub-1µs Latency -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">bolt</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">Sub-1µs Latency</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">MurmurHash3 Engine</p>
                     </div>
-                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Certifications</span>
-                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">Google Certified</h3>
-                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Advanced Data Analytics and professional cloud software engineering credentials.</p>
+
+                    <!-- Card 8: Google Certified -->
+                    <div class="glass-panel p-4 md:p-5 rounded-2xl text-center bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl w-[190px] md:w-[210px] flex-shrink-0 flex flex-col items-center justify-center hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        <span class="material-symbols-outlined text-3xl text-primary mb-2">workspace_premium</span>
+                        <h3 class="font-headline-sm text-base text-on-surface font-semibold mb-1">Google Certified</h3>
+                        <p class="font-body-md text-xs text-on-surface-variant">Data &amp; Cloud Analytics</p>
+                    </div>
                 </div>
             </div>
         </div>
