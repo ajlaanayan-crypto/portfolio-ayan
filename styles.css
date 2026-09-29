@@ -138,27 +138,29 @@ body {
   transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* Pure Liquid Glass Navigation Bar (Zero Blur, Ultra Clear & Sharp) */
+/* Optical Crystal Liquid Glass Navigation Bar (Beveled Edge Refraction) */
 .navbar,
 nav.fixed {
-  /* Blur 0 - 100% sharp visibility through the glass, zero haze */
+  /* Blur 0 - 100% sharp optical clarity through the glass */
   backdrop-filter: blur(0px) !important;
   -webkit-backdrop-filter: blur(0px) !important;
 
-  /* Sheer liquid glass tint */
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%) !important;
+  /* Crystalline refractive beveled border with sheer transparent core */
+  border: 1px solid transparent !important;
+  background: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%) padding-box,
+    linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.15) 35%, rgba(255, 255, 255, 0.03) 65%, rgba(255, 255, 255, 0.35) 100%) border-box !important;
 
-  /* Crystalline polished liquid border */
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
-
-  /* Liquid surface specular highlights (curved top rim sheen & bottom subtle reflection) */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06),
-              inset 0 1px 0 rgba(255, 255, 255, 0.6),
-              inset 0 -1px 0 rgba(255, 255, 255, 0.15) !important;
+  /* Multi-angle internal rim caustics & refractive edge glow */
+  box-shadow: 
+    0 12px 36px -10px rgba(0, 0, 0, 0.08),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 0 16px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 1px 0 rgba(255, 255, 255, 0.25) !important;
 
   border-radius: 50px !important;
   z-index: 1000 !important;
-  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .dark .navbar,
@@ -167,14 +169,17 @@ nav.fixed {
   backdrop-filter: blur(0px) !important;
   -webkit-backdrop-filter: blur(0px) !important;
 
-  /* Dark mode sheer liquid glass - pure transparency, zero dark cloud */
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%) !important;
+  /* Dark mode crystal glass - ultra transparent core with sharp optical prism edge */
+  border: 1px solid transparent !important;
+  background: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.005) 100%) padding-box,
+    linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.08) 35%, rgba(255, 255, 255, 0.02) 65%, rgba(255, 255, 255, 0.22) 100%) border-box !important;
 
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3),
-              inset 0 1px 0 rgba(255, 255, 255, 0.25),
-              inset 0 -1px 0 rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 
+    0 16px 40px -10px rgba(0, 0, 0, 0.45),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 0 18px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 1px 0 rgba(255, 255, 255, 0.15) !important;
 
   border-radius: 50px !important;
   z-index: 1000 !important;
