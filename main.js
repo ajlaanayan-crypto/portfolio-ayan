@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initImages();
     initMarqueeTouch();
+    initLiquidGlassNav();
 });
 
 /* ==========================================
@@ -321,4 +322,69 @@ function initMarqueeTouch() {
 
     marquee.addEventListener('touchend', resumeMarquee, { passive: true });
     marquee.addEventListener('touchcancel', resumeMarquee, { passive: true });
+}
+
+/* ==========================================
+   8. Optical Liquid Glass Dynamic Refraction Tracking (iOS 27 Optics)
+   ========================================== */
+function initLiquidGlassNav() {
+    const navbars = document.querySelectorAll('.navbar, nav.fixed');
+    if (!navbars.length) return;
+
+    // Initialize physical SVG displacement lens with chromatic fringe
+    if (typeof window.liquidGlass === 'function') {
+        navbars.forEach(nav => {
+            window.liquidGlass(nav, {
+                scale: -145,       // Strong optical lens distortion on all 4 edges
+                chroma: 10,        // Deep chromatic aberration prism dispersion
+                border: 0.16,      // 4-side perimeter refraction zone
+                mapBlur: 14,       // Smooth optical curvature
+                blur: 0,           // 100% Crystal clear center
+                saturate: 1.65,    // Optical vibrancy
+                radius: 50
+            });
+        });
+    }
+
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    const updateGlassRefraction = () => {
+        const scrollY = window.scrollY;
+        const delta = scrollY - lastScrollY;
+        lastScrollY = scrollY;
+
+        // Dynamic light caustic angle across curved glass
+        const lightX = 50 + Math.sin(scrollY * 0.008) * 35;
+        const lightY = Math.min(90, Math.max(10, 30 + delta * 2));
+
+        navbars.forEach(nav => {
+            nav.style.setProperty('--glass-light-x', `${lightX.toFixed(1)}%`);
+            nav.style.setProperty('--glass-light-y', `${lightY.toFixed(1)}%`);
+        });
+
+        ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateGlassRefraction);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    // Interactive cursor refraction flare on desktop
+    window.addEventListener('mousemove', (e) => {
+        navbars.forEach(nav => {
+            const rect = nav.getBoundingClientRect();
+            if (e.clientY >= rect.top - 120 && e.clientY <= rect.bottom + 120) {
+                const mouseXPercent = ((e.clientX - rect.left) / rect.width) * 100;
+                const clampedX = Math.min(95, Math.max(5, mouseXPercent));
+                nav.style.setProperty('--glass-light-x', `${clampedX.toFixed(1)}%`);
+            }
+        });
+    }, { passive: true });
+
+    // Initial placement
+    updateGlassRefraction();
 }
