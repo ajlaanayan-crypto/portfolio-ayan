@@ -159,7 +159,8 @@
                 <div class="absolute bottom-8 left-8 right-8 md:bottom-12 md:left-12 p-5 md:p-6 bg-surface-container-low/85 dark:bg-black/50 backdrop-blur-xl rounded-2xl border border-white/20 dark:border-white/10 max-w-xl">
                     <div class="mb-4 flex flex-wrap gap-2">
                         <span class="px-4 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-xs uppercase tracking-[0.2em] font-semibold">Distributed Systems</span>
-                        <span class="px-4 py-1 rounded-full bg-surface-container-high/80 text-on-surface-variant font-label-sm text-xs uppercase tracking-[0.2em]">Feature Orchestration</span>
+                        <span class="px-4 py-1 rounded-full bg-surface-container-high/80 text-on-surface-variant font-label-sm text-xs uppercase tracking-[0.2em]">Active Development</span>
+                        <span class="px-4 py-1 rounded-full bg-surface-container-high/80 text-on-surface-variant font-label-sm text-xs uppercase tracking-[0.2em]">2026</span>
                     </div>
                     <h1 class="font-display-xl text-3xl md:text-5xl text-on-surface mb-4 leading-none tracking-tight">NexusFlag (Enterprise Engine)</h1>
                     <p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant">Zero-Network Distributed Feature Orchestration &amp; Remote Configuration Engine with Sub-Microsecond In-Memory AST Evaluation.</p>
@@ -182,7 +183,8 @@
                             </div>
                             <div>
                                 <h4 class="font-label-sm text-xs uppercase tracking-[0.2em] text-outline mb-2">Timeline</h4>
-                                <p class="font-body-md text-body-md text-on-surface">3 Months (Core Engine &amp; Edge Relays)</p>
+                                <p class="font-body-md text-body-md text-on-surface font-semibold">5th Sept 2026 – Present</p>
+                                <p class="text-xs text-on-surface-variant mt-1">Active Development &bull; Ongoing</p>
                             </div>
                             <div>
                                 <h4 class="font-label-sm text-xs uppercase tracking-[0.2em] text-outline mb-2">Stack / Tools</h4>
@@ -216,6 +218,199 @@
                     <div class="img-wrap w-full h-80 md:h-[450px] rounded-3xl overflow-hidden border border-white/20 shadow-xl relative group">
                         <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="In-Memory SDK Test Bench and Hash Inspector" src="images/nexusflag-sdk.png"/>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Engineering Challenges & Active Investigation Section -->
+        <section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto mb-16 md:mb-section-gap reveal">
+            <div class="p-8 md:p-12 rounded-3xl bg-surface-container-low/40 dark:bg-surface-container-highest/10 backdrop-blur-lg border border-white/10 shadow-2xl relative overflow-hidden">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-6 border-b border-white/10">
+                    <div>
+                        <p class="text-xs text-outline font-label-sm uppercase tracking-wider mb-2">Started 5th Sept 2026 &bull; Ongoing Work</p>
+                        <h2 class="font-headline-lg text-3xl md:text-4xl text-on-surface leading-tight">Current Challenges &amp; Bottlenecks Under Active Research</h2>
+                    </div>
+                    <p class="text-sm text-on-surface-variant max-w-md">
+                        NexusFlag is undergoing distributed systems hardening. Below is a transparent audit of production scale edge cases, connection bottlenecks, and data race hurdles currently under active engineering.
+                    </p>
+                </div>
+
+                <!-- Challenges Grid (7 Minimum Architectural Challenges) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Challenge 1: Edge Relay Reconnect Storms -->
+                    <div class="p-6 rounded-2xl bg-surface-container-low/60 dark:bg-black/30 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <div class="mb-4">
+                                <h3 class="font-headline-sm text-lg text-on-surface font-semibold">1. Edge Relay Reconnect Thundering Herd &amp; Socket Storms</h3>
+                                <span class="text-xs text-outline font-label-sm uppercase tracking-wider block mt-1">Issue: Concurrent Ingress Flooding on Relay Restarts</span>
+                            </div>
+                            <ul class="text-sm text-on-surface-variant space-y-2 mb-4">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-on-surface-variant/50 mt-0.5">•</span>
+                                    <span><strong>Ingress Saturation:</strong> When an Edge Relay Proxy restarts or undergoes rolling deployment, thousands of connected microservice SDKs drop persistent SSE streams simultaneously and flood reconnect attempts.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-on-surface-variant/50 mt-0.5">•</span>
+                                    <span><strong>Socket Starvation:</strong> The sudden barrage of simultaneous TLS handshakes exhausts available TCP file descriptors on host ingress instances before keep-alive pools stabilize.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-white/10">
+                            <span class="text-xs text-outline font-label-sm uppercase tracking-wider block mb-1">Solution in Progress:</span>
+                            <p class="text-xs text-on-surface-variant/80">Implementing full-jitter exponential backoff algorithms in @nexusflag/sdk with randomized jitter intervals and token-bucket ingress rate limiting on the relay proxy.</p>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 2: SSE Heap Footprint Under 50k+ Connections -->
+                    <div class="p-6 rounded-2xl bg-surface-container-low/60 dark:bg-black/30 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <div class="mb-4">
+                                <h3 class="font-headline-sm text-lg text-on-surface font-semibold">2. Node.js Heap Pressure Under 50,000+ SSE Connections</h3>
+                                <span class="text-xs text-outline font-label-sm uppercase tracking-wider block mt-1">Issue: Per-Socket Memory Bloat &amp; Garbage Collection Pauses</span>
+                            </div>
+                            <ul class="text-sm text-on-surface-variant space-y-2 mb-4">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-on-surface-variant/50 mt-0.5">•</span>
+                                    <span><strong>Buffer Retention:</strong> Holding 50,000+ open HTTP/2 multiplexed SSE sessions per Node.js instance retains substantial libuv write buffers during high-frequency delta broadcasts.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-on-surface-variant/50 mt-0.5">•</span>
+                                    <span><strong>GC Latency Spikes:</strong> Minor GC cycles block the main thread for 15–30ms during rapid subscriber disconnect churn, causing transient heart-beat timeout drops.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-white/10">
+                            <span class="text-xs text-outline font-label-sm uppercase tracking-wider block mb-1">Solution in Progress:</span>
+                            <p class="text-xs text-on-surface-variant/80">Benchmarking a lightweight Rust/Go edge relay daemon utilizing epoll/kqueue event loops and zero-copy buffer pooling to replace the Node.js relay in high-density regions.</p>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 3: Deep AST Nested Evaluation Latency -->
+                    <div class="p-6 rounded-2xl bg-surface-container-low/60 dark:bg-black/30 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <div class="mb-4">
+                                <h3 class="font-headline-sm text-lg text-on-surface font-semibold">3. Deeply Nested AST Evaluation Tail Latency Spikes</h3>
+                                <span class="text-xs text-outline font-label-sm uppercase tracking-wider block mt-1">Issue: V8 De-optimization on Multi-Clause Rule Trees</span>
+                            </div>
+                            <ul class="text-sm text-on-surface-variant space-y-2 mb-4">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-on-surface-variant/50 mt-0.5">•</span>
+                                    <span><strong>Tail Latency Degradation:</strong> While flat boolean checks resolve in ~0.70µs, complex rule trees with 15+ nested predicates (semver comparisons, regex parsing, IP CIDR blocks) spike P99 latencies to &gt;12µs.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-on-surface-variant/50 mt-0.5">•</span>
+                                    <span><strong>Call Stack Recursion:</strong> Recursive AST traversal across dynamic attribute trees incurs function call overhead that limits CPU L1 cache locality in microsecond-critical microservices.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-white/10">
+                            <span class="text-xs text-outline font-label-sm uppercase tracking-wider block mb-1">Solution in Progress:</span>
+                            <p class="text-xs text-on-surface-variant/80">Designing an ahead-of-time (AOT) AST compilation pass that flattens nested boolean clauses into a linear, non-recursive bytecode-style evaluation array.</p>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 4: Cold Boot Snapshot Invalidation Staleness -->
+                    <div class="p-6 rounded-2xl bg-surface-container-low/60 dark:bg-black/30 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <div class="mb-4">
+                                <h3 class="font-headline-sm text-lg text-on-surface font-semibold">4. Cold Boot Disk Snapshot Staleness During Blackouts</h3>
+                                <span class="text-xs text-outline font-label-sm uppercase tracking-wider block mt-1">Issue: Invalidation Leaks Under Extended Network Partitions</span>
+                            </div>
+                            <ul class="text-sm text-on-surface-variant space-y-2 mb-4">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-on-surface-variant/50 mt-0.5">•</span>
+                                    <span><strong>Obsolete Flag Survival:</strong> When a host service starts during a total upstream network blackout, it initializes from local encrypted disk snapshots (`.snapshot.enc`).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-on-surface-variant/50 mt-0.5">•</span>
+                                    <span><strong>Kill-Switch Lag:</strong> If an emergency kill switch was toggled upstream while the service was offline, the service might evaluate obsolete feature states until upstream reconnection settles.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-white/10">
+                            <span class="text-xs text-outline font-label-sm uppercase tracking-wider block mb-1">Solution in Progress:</span>
+                            <p class="text-xs text-on-surface-variant/80">Implementing epoch-stamped cryptographic leases with configurable snapshot TTL thresholds that force automatic fallback to hardened defaults when snapshots expire offline.</p>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 5: Telemetry Buffer Ingestion Contention -->
+                    <div class="p-6 rounded-2xl bg-surface-container-low/60 dark:bg-black/30 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <div class="mb-4">
+                                <h3 class="font-headline-sm text-lg text-on-surface font-semibold">5. High-Throughput Telemetry Contention &amp; Metric Loss</h3>
+                                <span class="text-xs text-outline font-label-sm uppercase tracking-wider block mt-1">Issue: Buffer Overflows at &gt;100k Evaluations/Sec</span>
+                            </div>
+                            <ul class="text-sm text-on-surface-variant space-y-2 mb-4">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-on-surface-variant/50 mt-0.5">•</span>
+                                    <span><strong>Queue Overflow:</strong> High-traffic host services generate hundreds of thousands of evaluation telemetry events per second, causing internal queue push locks and buffer drops during async flush intervals.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-on-surface-variant/50 mt-0.5">•</span>
+                                    <span><strong>Memory Overhead:</strong> Retaining evaluation metadata arrays during slow network aggregation periods causes unexpected heap expansion on memory-constrained microservice containers.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-white/10">
+                            <span class="text-xs text-outline font-label-sm uppercase tracking-wider block mb-1">Solution in Progress:</span>
+                            <p class="text-xs text-on-surface-variant/80">Replacing lock-bound arrays with a lock-free circular ring buffer and dynamic reservoir sampling that downsamples high-volume non-anomalous evaluations automatically.</p>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 6: Multi-User Control Plane Mutation Races -->
+                    <div class="p-6 rounded-2xl bg-surface-container-low/60 dark:bg-black/30 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <div class="mb-4">
+                                <h3 class="font-headline-sm text-lg text-on-surface font-semibold">6. Control Plane Multi-User Concurrency &amp; Lost Updates</h3>
+                                <span class="text-xs text-outline font-label-sm uppercase tracking-wider block mt-1">Issue: Unlocked Parallel Rule Modifications in Admin Console</span>
+                            </div>
+                            <ul class="text-sm text-on-surface-variant space-y-2 mb-4">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-on-surface-variant/50 mt-0.5">•</span>
+                                    <span><strong>Lost Update Hazards:</strong> In enterprise engineering teams, two operators updating percentage rollouts or targeting criteria on the same flag concurrently can silently overwrite each other's edits.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-on-surface-variant/50 mt-0.5">•</span>
+                                    <span><strong>Audit Ledger Branching:</strong> Unsynchronized parallel state commits risk creating diverging history trees in the PostgreSQL audit log without clear deterministic linearization.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-white/10">
+                            <span class="text-xs text-outline font-label-sm uppercase tracking-wider block mb-1">Solution in Progress:</span>
+                            <p class="text-xs text-on-surface-variant/80">Implementing Optimistic Concurrency Control (OCC) with atomic version hashes (`version_id`), ETag verification headers, and real-time collaborative presence locks over WebSockets.</p>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 7: Cross-Region Redis Pub/Sub Replication Lag -->
+                    <div class="p-6 rounded-2xl bg-surface-container-low/60 dark:bg-black/30 border border-white/10 flex flex-col justify-between md:col-span-2">
+                        <div>
+                            <div class="mb-4">
+                                <h3 class="font-headline-sm text-lg text-on-surface font-semibold">7. Cross-Region Redis Replication Lag &amp; Delta Desynchronization</h3>
+                                <span class="text-xs text-outline font-label-sm uppercase tracking-wider block mt-1">Issue: Intercontinental Propagation Latency &amp; Message Drops</span>
+                            </div>
+                            <ul class="text-sm text-on-surface-variant space-y-2 mb-4">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-on-surface-variant/50 mt-0.5">•</span>
+                                    <span><strong>Inter-Region Skew:</strong> Under geographically dispersed deployments (e.g. US-East to AP-South), cross-cloud Redis Pub/Sub propagation experiences 80–150ms network jitter.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-on-surface-variant/50 mt-0.5">•</span>
+                                    <span><strong>Sequence Gap Risk:</strong> Transient socket reconnects during delta publication can result in missed invalidations, leaving distant edge nodes serving slightly divergent configuration states.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-white/10">
+                            <span class="text-xs text-outline font-label-sm uppercase tracking-wider block mb-1">Solution in Progress:</span>
+                            <p class="text-xs text-on-surface-variant/80">Attaching monotonic incrementing sequence IDs and vector clocks to all delta patches, backed by an automated HTTP catch-up reconciliation protocol whenever an edge proxy detects a sequence gap.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Summary Note (Seamless, No rectangle background, No icon, No work-in-progress pill) -->
+                <div class="mt-8 pt-6 border-t border-white/10">
+                    <p class="text-sm text-on-surface-variant">
+                        <span class="text-on-surface font-semibold">Engineering Status:</span> Active development sprint cycles resolving distributed synchronization and latency edge cases. Solutions under active research and implementation.
+                    </p>
                 </div>
             </div>
         </section>
