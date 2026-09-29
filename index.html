@@ -311,21 +311,18 @@
             </div>
 
             <!-- Project 7: ISRO SatQuery AI -->
-            <div class="group relative block overflow-hidden rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 reveal hover:shadow-2xl hover:shadow-black/5">
-                <div class="aspect-[4/3] w-full bg-surface-variant relative overflow-hidden flex items-center justify-center p-8 bg-gradient-to-br from-sky-950/40 via-blue-900/30 to-black/20">
-                    <div class="text-center p-6 flex flex-col items-center justify-center transition-transform duration-700 group-hover:scale-105">
-                        <span class="material-symbols-outlined text-6xl text-primary mb-3">satellite_alt</span>
-                        <h4 class="font-headline-md text-2xl font-bold text-on-surface mb-1">SatQuery AI</h4>
-                        <span class="font-label-sm text-xs text-primary uppercase tracking-widest">ISRO Geospatial AI</span>
-                    </div>
+            <div class="group relative block overflow-hidden rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 reveal hover:shadow-2xl hover:shadow-black/5 cursor-pointer" onclick="window.location.href='project-satquery.html'">
+                <div class="aspect-[4/3] w-full bg-surface-variant relative overflow-hidden">
+                    <img class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" alt="ISRO SatQuery AI Dual-Panel GIS Workspace" src="images/satquery-hero.png"/>
                 </div>
                 <div class="absolute inset-0 p-8 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end translate-y-8 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <span class="font-label-sm text-xs text-primary uppercase tracking-[0.2em] mb-2">Python, PyTorch &amp; GDAL</span>
+                    <span class="font-label-sm text-xs text-primary uppercase tracking-[0.2em] mb-2">Python, PyTorch, LangGraph &amp; Next.js</span>
                     <h3 class="font-headline-md text-2xl text-white mb-2">ISRO SatQuery AI</h3>
-                    <p class="font-body-md text-sm text-white/80 mb-4">Multi-agent satellite imagery analysis &amp; geospatial intelligence prototype for natural resource queries.</p>
-                    <div class="flex items-center gap-3">
-                        <a class="font-label-sm text-xs uppercase tracking-wider text-white bg-white/20 hover:bg-white/30 backdrop-blur-md px-4 py-2 rounded-full transition-colors inline-flex items-center gap-1.5" href="https://github.com/ajlaanayan-crypto/SIH-SatQuery-AI" target="_blank" rel="noopener">
-                            <span class="material-symbols-outlined text-sm">code</span> View on GitHub &rarr;
+                    <p class="font-body-md text-sm text-white/80 mb-3">Agentic multimodal vision-language remote sensing platform with dual-panel synchronized GIS canvas.</p>
+                    <div class="flex items-center justify-between gap-4">
+                        <span class="font-body-md text-sm text-white/90 hover:underline flex items-center gap-1">View Case Study &rarr;</span>
+                        <a class="font-label-sm text-xs uppercase tracking-wider text-white bg-white/20 hover:bg-white/30 backdrop-blur-md px-3.5 py-1.5 rounded-full transition-colors inline-flex items-center gap-1.5 z-10" href="https://github.com/ajlaanayan-crypto/isro-satquery-ai" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                            <span class="material-symbols-outlined text-xs">code</span> GitHub
                         </a>
                     </div>
                 </div>
