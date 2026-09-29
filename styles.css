@@ -138,40 +138,43 @@ body {
   transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* Crystal Clear Optical Glass Navigation Bar */
+/* Pure Liquid Glass Navigation Bar (Zero Blur, Ultra Clear & Sharp) */
 .navbar,
 nav.fixed {
-  /* Ultra-clear optical glass - high clarity, zero milkiness */
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%) !important;
-  backdrop-filter: blur(14px) saturate(190%) !important;
-  -webkit-backdrop-filter: blur(14px) saturate(190%) !important;
+  /* Blur 0 - 100% sharp visibility through the glass, zero haze */
+  backdrop-filter: blur(0px) !important;
+  -webkit-backdrop-filter: blur(0px) !important;
 
-  /* Crystalline fine border */
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  /* Sheer liquid glass tint */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%) !important;
 
-  /* Polished crystal rim highlights (top & bottom bevel) + soft elevation */
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08),
-              inset 0 1px 0 0 rgba(255, 255, 255, 0.5),
-              inset 0 -1px 0 0 rgba(255, 255, 255, 0.1) !important;
+  /* Crystalline polished liquid border */
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+
+  /* Liquid surface specular highlights (curved top rim sheen & bottom subtle reflection) */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06),
+              inset 0 1px 0 rgba(255, 255, 255, 0.6),
+              inset 0 -1px 0 rgba(255, 255, 255, 0.15) !important;
 
   border-radius: 50px !important;
   z-index: 1000 !important;
-  will-change: backdrop-filter;
   transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .dark .navbar,
 .dark nav.fixed {
-  /* Dark mode crystal glass - ultra transparent, no dark mud/tint patch */
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%) !important;
-  backdrop-filter: blur(14px) saturate(190%) !important;
-  -webkit-backdrop-filter: blur(14px) saturate(190%) !important;
+  /* Blur 0 in dark theme */
+  backdrop-filter: blur(0px) !important;
+  -webkit-backdrop-filter: blur(0px) !important;
 
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  /* Dark mode sheer liquid glass - pure transparency, zero dark cloud */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%) !important;
 
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35),
-              inset 0 1px 0 0 rgba(255, 255, 255, 0.22),
-              inset 0 -1px 0 0 rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.25),
+              inset 0 -1px 0 rgba(255, 255, 255, 0.05) !important;
 
   border-radius: 50px !important;
   z-index: 1000 !important;
