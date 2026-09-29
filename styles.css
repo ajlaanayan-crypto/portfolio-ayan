@@ -265,3 +265,12 @@ body {
   z-index: 3;
   background: var(--color-surface-container-low);
 }
+
+/* Hide scrollbar utility for horizontal scroll carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

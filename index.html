@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Mohammad Ayan | Full Stack Developer, Drone Specialist &amp; IITM Student</title>
+    <title>Mohammad Ayan | Full Stack &amp; Distributed Systems Engineer | IIT Madras</title>
     
     <!-- CSS Dependencies -->
     <link href="styles.css" rel="stylesheet"/>
@@ -150,13 +150,13 @@
     </div>
 
     <!-- Hero Section -->
-    <header class="pt-48 pb-24 md:pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center text-center animate-fade-in">
-        <span class="font-label-sm text-sm uppercase tracking-[0.25em] text-primary mb-4 font-semibold block">Full Stack &amp; Simulations</span>
+    <header class="pt-48 pb-20 md:pb-28 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center text-center animate-fade-in">
+        <span class="font-label-sm text-sm uppercase tracking-[0.25em] text-primary mb-4 font-semibold block">Full Stack &amp; Distributed Systems</span>
         <h1 class="font-display-xl-mobile text-display-xl-mobile md:font-display-xl md:text-display-xl text-on-surface mb-8 max-w-5xl mx-auto tracking-tighter leading-[1.05]">
             Mohammad Ayan.
         </h1>
         <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed">
-            Crafting scalable MERN web architectures and autonomous drone control simulations. Currently pursuing a BS in Data Science at IIT Madras (2025 Batch).
+            Architecting scalable full-stack web platforms, high-throughput distributed systems, and real-time AI solutions. Currently pursuing a BS in Data Science &amp; Applications at IIT Madras (2025 Batch).
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
             <a class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-sm text-label-sm tracking-widest uppercase hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg shadow-primary/10 scale-95 active:scale-90" href="#work">
@@ -169,28 +169,121 @@
         </div>
     </header>
 
-    <!-- Key Skill Quick Highlights -->
+    <!-- Core Domains & Credentials Horizontal Carousel -->
     <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-24 reveal">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
-            <div class="glass-panel p-6 rounded-2xl text-center bg-white/20 dark:bg-black/10">
-                <span class="material-symbols-outlined text-3xl text-primary mb-3">school</span>
-                <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-1">IIT Madras BS</h3>
-                <p class="font-body-md text-xs text-on-surface-variant">Data Science Program</p>
+        <!-- Section Header with Controls -->
+        <div class="flex items-center justify-between mb-6">
+            <div>
+                <span class="font-label-sm text-xs uppercase tracking-[0.2em] text-primary font-semibold block mb-1">Expertise &amp; Credentials</span>
+                <h2 class="font-headline-md text-2xl md:text-3xl text-on-surface">Core Specializations</h2>
             </div>
-            <div class="glass-panel p-6 rounded-2xl text-center bg-white/20 dark:bg-black/10">
-                <span class="material-symbols-outlined text-3xl text-primary mb-3">flight_takeoff</span>
-                <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-1">Drone Simulation</h3>
-                <p class="font-body-md text-xs text-on-surface-variant">Intern at Drone Tech Co.</p>
+            <!-- Navigation Arrow Controls -->
+            <div class="flex items-center gap-2">
+                <button id="carousel-prev" class="w-10 h-10 rounded-full border border-white/15 bg-surface-container-low/40 dark:bg-white/5 hover:bg-white/15 flex items-center justify-center text-on-surface transition-all active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" aria-label="Previous card">
+                    <span class="material-symbols-outlined text-lg">arrow_back</span>
+                </button>
+                <button id="carousel-next" class="w-10 h-10 rounded-full border border-white/15 bg-surface-container-low/40 dark:bg-white/5 hover:bg-white/15 flex items-center justify-center text-on-surface transition-all active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" aria-label="Next card">
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                </button>
             </div>
-            <div class="glass-panel p-6 rounded-2xl text-center bg-white/20 dark:bg-black/10">
-                <span class="material-symbols-outlined text-3xl text-primary mb-3">satellite_alt</span>
-                <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-1">Space &amp; Quantum</h3>
-                <p class="font-body-md text-xs text-on-surface-variant">Drone signalling research</p>
+        </div>
+
+        <!-- Horizontal Scrollable Track -->
+        <div id="skills-carousel" class="flex gap-5 overflow-x-auto no-scrollbar scroll-smooth py-3 px-1 cursor-grab active:cursor-grabbing select-none snap-x snap-mandatory">
+            <!-- Card 1: IIT Madras BS -->
+            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">school</span>
+                    </div>
+                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Academics &bull; 2025 Batch</span>
+                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">IIT Madras BS</h3>
+                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">BS in Data Science &amp; Applications with a focus on statistical modeling and systems.</p>
+                </div>
             </div>
-            <div class="glass-panel p-6 rounded-2xl text-center bg-white/20 dark:bg-black/10">
-                <span class="material-symbols-outlined text-3xl text-primary mb-3">workspace_premium</span>
-                <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-1">Google Certified</h3>
-                <p class="font-body-md text-xs text-on-surface-variant">Coursera credentials</p>
+
+            <!-- Card 2: Distributed Systems (NexusFlag) -->
+            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">hub</span>
+                    </div>
+                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Distributed Systems</span>
+                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">NexusFlag Engine</h3>
+                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Zero-network in-memory AST rule evaluation with sub-15ms HTTP/2 SSE edge invalidation.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Full Stack Engineering -->
+            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">code_blocks</span>
+                    </div>
+                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Architecture &bull; React 19</span>
+                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">Full Stack Web</h3>
+                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Next.js 16, TypeScript, Node.js, and high-concurrency PostgreSQL &amp; MongoDB architectures.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Generative AI & Gemini -->
+            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">psychology</span>
+                    </div>
+                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Generative AI &bull; LLMs</span>
+                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">Gemini Integration</h3>
+                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Real-time market sentiment streaming, prompt caching, and structured schema outputs.</p>
+                </div>
+            </div>
+
+            <!-- Card 5: Geo-Spatial AI / ISRO -->
+            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">satellite_alt</span>
+                    </div>
+                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Geo-Spatial &bull; ISRO</span>
+                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">Satellite GIS &amp; AI</h3>
+                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Orbital telemetry calculation, Cesium 3D geospatial rendering, and raster metadata queries.</p>
+                </div>
+            </div>
+
+            <!-- Card 6: Saga Orchestration -->
+            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">sync_alt</span>
+                    </div>
+                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Event-Driven Architecture</span>
+                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">Saga Orchestrator</h3>
+                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Choreographed distributed transactions with Kafka, Redis Pub/Sub, and auto-compensating rollback.</p>
+                </div>
+            </div>
+
+            <!-- Card 7: Ultra-Low Latency Caching -->
+            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">bolt</span>
+                    </div>
+                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Ultra-Low Latency</span>
+                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">Sub-1µs Evaluation</h3>
+                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">In-memory bitwise MurmurHash3 bucketing, lock-free ring buffers, and fast state machines.</p>
+                </div>
+            </div>
+
+            <!-- Card 8: Google Certified -->
+            <div class="glass-panel p-6 rounded-2xl flex-shrink-0 w-[260px] md:w-[290px] bg-white/20 dark:bg-black/10 border border-white/10 backdrop-blur-xl snap-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">workspace_premium</span>
+                    </div>
+                    <span class="text-[11px] text-outline font-label-sm uppercase tracking-wider block mb-1">Certifications</span>
+                    <h3 class="font-headline-sm text-lg text-on-surface font-semibold mb-2">Google Certified</h3>
+                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Advanced Data Analytics and professional cloud software engineering credentials.</p>
+                </div>
             </div>
         </div>
     </section>

@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initScrollReveal();
     initImages();
+    initHorizontalCarousel();
 });
 
 /* ==========================================
@@ -296,4 +297,76 @@ function initImages() {
             img.setAttribute('decoding', 'async');
         }
     });
+}
+
+/* ==========================================
+   7. Horizontal Skills Carousel Interaction
+   ========================================== */
+function initHorizontalCarousel() {
+    const carousel = document.getElementById('skills-carousel');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+
+    if (!carousel) return;
+
+    const scrollAmount = 310;
+
+    const updateButtonStates = () => {
+        if (!prevBtn || !nextBtn) return;
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        prevBtn.disabled = carousel.scrollLeft <= 5;
+        nextBtn.disabled = carousel.scrollLeft >= maxScroll - 5;
+    };
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+    }
+
+    carousel.addEventListener('scroll', updateButtonStates, { passive: true });
+    updateButtonStates();
+
+    // Mouse Drag to Scroll
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    carousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+        carousel.classList.add('cursor-grabbing');
+    });
+
+    window.addEventListener('mouseleave', () => {
+        isDown = false;
+        carousel.classList.remove('cursor-grabbing');
+    });
+
+    window.addEventListener('mouseup', () => {
+        isDown = false;
+        carousel.classList.remove('cursor-grabbing');
+    });
+
+    carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 1.5; // Drag sensitivity
+        carousel.scrollLeft = scrollLeft - walk;
+    });
+
+    // Horizontal wheel scroll without shift key
+    carousel.addEventListener('wheel', (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+            carousel.scrollLeft += e.deltaY;
+        }
+    }, { passive: true });
 }
